@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int ma,b,c,d,e,F,g=0;
+    scanf("%d",&ma);
+    F=ma;
+    for(;;)
+    {
+        b=ma/10;
+        c=ma%10;
+        d=(b+c)%10;
+        e=c*10+d;
+        ma=e;
+        g++;
+        if(F==ma)
+        {
+            break;
+        }
+    }
+    printf("%d",g);
+    return 0;
+}
