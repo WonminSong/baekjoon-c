@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int b,i,a,c,j,d;
+    scanf("%d",&b);
+    for(i=0;i<b;i++)
+    {
+        d=1;
+        scanf("%d %d",&a,&c);
+        for(j=0;j<c;j++)
+        {
+            d=d*a%10;
+        }
+        a=d%10;
+        if(a==0)
+        {
+            a=10;
+        }
+        printf("%d\n",a);
+    }
+    return 0;
+}
