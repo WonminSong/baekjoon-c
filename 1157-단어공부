@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[26]={0},b,d=0,e=0,i;
+    char c[1000001],f;
+    scanf("%s",c);
+    for(i=0;c[i]!='\0';i++)
+    {
+        if(c[i]<=90)
+        {
+            b=c[i]-65;
+        }
+        else
+        {
+            b=c[i]-97;
+        }
+        a[b]=a[b]+1;
+    }
+    for(i=0;i<26;i++)
+    {
+        if(a[i]==d)
+        {
+            e++;
+        }
+        if(a[i]>d)
+        {
+            d=a[i];
+            f=i+65;
+            e=0;
+        }
+    }
+    if(e==0)
+    {
+        printf("%c",f);
+    }
+    if(e!=0)
+    {
+        printf("?");
+    }
+    return 0;
+}
