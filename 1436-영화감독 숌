@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b=0,e,i=666;
+    scanf("%d",&a);
+    while(1)
+    {
+        e=i;
+        while(e>=666)
+        {
+            if(e%1000==666)
+            {
+                b++;
+                break;
+            }
+            e=e/10;
+        }
+        if(b==a)
+        {
+            printf("%d",i);
+            break;
+        }
+        i++;
+    }
+    return 0;
+}
