@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    long long a[91];
+    int b,i;
+    a[1]=1;
+    scanf("%d",&b);
+    for(i=2;i<=b;i++)
+    {
+        a[i]=a[i-1]+a[i-2];
+    }
+    printf("%lld\n",a[b]);
+    return 0;
+}
