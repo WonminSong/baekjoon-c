@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+	long long int a,b,c,d,i;
+	scanf("%lld %lld %lld",&a,&c,&d);
+	b=d-c;
+	if(b<=0)
+    {
+        printf("-1");
+        return 0;
+    }
+	printf("%lld",(a/b)+1);
+	return 0;
+}
