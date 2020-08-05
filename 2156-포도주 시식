@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+	int c[10001]={0},a[10001]={0};
+	int b,i;
+    scanf("%d",&b);
+	for(i=1;i<=b;i++)
+	{
+        scanf("%d",&a[i]);
+        c[1]=a[1];
+        c[2]=a[1]+a[2];
+    }
+    for(i=3;i<=b;i++)
+    {
+        if (c[i-1]>c[i-2]+a[i])
+        {
+            if (c[i-3]+a[i-1]+a[i]>c[i-1])
+            {
+                c[i]=c[i-3]+a[i-1]+a[i];
+            }
+            else
+            {
+                c[i]=c[i-1];
+            }
+        }
+        else
+        {
+            if (c[i-3]+a[i-1]+a[i]>c[i-2]+a[i])
+            {
+                c[i]=c[i-3]+a[i-1]+a[i];
+            }
+            else
+            {
+                c[i]=c[i-2]+a[i];
+            }
+        }
+    }
+	printf("%d",c[b]);
+}
