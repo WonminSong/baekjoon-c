@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int b;
+    scanf("%d",&b);
+    int a[b],c[b];
+    int d=-1000,i;
+    for(i=0;i<b;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    c[0]=a[0];
+    for(i=1;i<b;i++)
+    {
+        c[i]=song(c[i-1]+a[i],a[i]);
+        d=song(d,c[i]);
+    }
+    d=song(d,c[0]);
+    printf("%d",d);
+    return 0;
+}
+
+int song(int a,int b)
+{
+    if(a>=b)
+    {
+        return a;
+    }
+    if(a<b)
+    {
+        return b;
+    }
+}
