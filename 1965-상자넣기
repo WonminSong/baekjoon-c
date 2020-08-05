@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void){
+    int b,i,j,e;
+    int a[1001]={},c[1001]={};
+    int f=0;
+    scanf("%d",&b);
+    for(i=1;i<=b;i++)
+    {
+        scanf("%d",&c[i]);
+    }
+    for(i=1;i<=b;i++)
+    {
+        e=0;
+        for (j=0;j<i;j++)
+        {
+            if(c[i]>c[j])
+            {
+                if(e<a[j])
+                {
+                    e=a[j];
+                }
+            }
+        }
+        a[i]=e+1;
+        if(f<a[i])
+        {
+            f=a[i];
+        }
+    }
+    printf("%d",f);
+}
