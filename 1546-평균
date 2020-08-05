@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() 
+{
+    int b,i;
+    double a[1000],c=0,d=0;
+    scanf("%d",&b);
+    for (i=0;i<b;i++)
+    {
+        scanf("%lf",&a[i]);
+        if (a[i]>c)
+        {
+            c=a[i];
+        }
+    }
+    for (i=0;i<b;i++)
+    {
+        a[i]=a[i]/c*100.0;
+        d+=a[i];
+    }
+    printf("%.2f",(d/(double)b));
+    return 0;
+}
