@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b[100],c,d=0,i,z;
+    scanf("%d\n",&a);
+    for(i=0;i<a;i++)
+    {
+        c=0;
+        scanf("%d",&b[i]);
+        for(z=1;z<=b[i];z++)
+        {
+            if(b[i]%z==0)
+            {
+                c++;
+            }
+        }
+        if(c==2)
+        {
+            d++;
+        }
+    }
+    printf("%d",d);
+    return 0;
+}
